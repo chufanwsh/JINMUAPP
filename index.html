@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // 设备判断逻辑
+        const ua = navigator.userAgent;
+        const isIOS = /iPhone|iPad|iPod/i.test(ua);
+        const isAndroid = /Android/i.test(ua);
+
+        // 目标URL配置
+        const iosUrl = "http://classone.jinmu05.com";
+        const androidUrl = "http://classone.jinmu05.com/#/pages/setting/download";
+
+        // 立即跳转
+        if (isIOS) window.location.href = iosUrl;
+        else if (isAndroid) window.location.href = androidUrl;
+        else window.location.href = androidUrl; // 非移动设备默认跳安卓
+    </script>
+</head>
+<body>
+    <p>正在跳转，请稍候...</p>
+</body>
+</html>
